@@ -7,3 +7,990 @@
  Template:       spine
  Version:        0.0.1
 */
+
+.header-search-wrapper-hide {
+ display: none;
+}
+
+.header-search-wrapper-open {
+ display: block;
+}
+
+.header-drawer-wrapper {
+ display: none;
+}
+.header-shelf-wrapper {
+ margin-top: 50px;
+}
+
+
+/* ----- header-shelf -----*/
+/* column one */
+.home .fluid .header-shelf.row.triptych .column.one {
+ border: 1px solid #dbdbdb;
+ border-top: none;
+ border-bottom: none;
+ width: 25%;
+}
+
+/* column two (empty) */
+.header-shelf .column.two {
+ height: 1px;
+}
+
+.home .fluid .row.triptych .column.two {
+ width: 62.5%;
+}
+
+.home .fluid .main-header .row.triptych.header-shelf .column.two {
+ padding: 1.5rem;
+ position: absolute;
+ left: 25%;
+ bottom: 20px;
+}
+
+.header-shelf .column.two li:after,
+.header-shelf .column.two ul:after {
+ content: "";
+ visibility: hidden;
+ display: block;
+ height: 0;
+ clear: both;
+}
+
+/* column three */
+.home .fluid .main-header .row.triptych .column.three {
+ border: 1px solid #dbdbdb;
+ border-top: none;
+ border-bottom: none;
+ width: 12.5%;
+}
+
+.header-shelf .column.three {
+ position: absolute;
+ right: 0;
+ top: 0;
+ bottom: 0;
+}
+
+.top-level-links-label,
+.search-label {
+ float: left;
+ text-align: center;
+ text-transform: uppercase;
+ width: 100%;
+}
+
+.top-level-links-label {
+ background: #efefef;
+ position: absolute;
+ top: 0;
+ bottom: 55%;
+ padding-top: 12%;
+ font-size: .8rem;
+ transition: background .3s ease;
+}
+
+.top-level-links-label:hover {
+ background: #dbdbdb;
+}
+
+.search-label {
+ position: absolute;
+ bottom: 20px;
+ font-size: .9rem;
+ font-weight: 700;
+ color: #981e32;
+ transition: color .3s ease;
+}
+
+.search-label:hover {
+ color: #5e6a71;
+}
+
+.search-label:after {
+ content: "$";
+ font-family: Spine-Icons;
+ margin: 0 -.25rem 0 .5rem;
+ position: relative;
+ top: .125rem;
+}
+
+
+/*----- header-drawer -----*/
+.header-drawer-wrapper {
+ background: #363636;
+ border-bottom: 5px solid #981e32;
+ font-size: .8rem;
+ position: relative;
+}
+
+.header-drawer .column > div {
+ padding: 1.5rem;
+}
+
+.header-drawer ul,
+.header-drawer li,
+.mega-menu-labels-wrapper ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+/* column one */
+section.single.triptych.row.header-drawer:before {
+ position: absolute;
+ content: "";
+ visibility: visible;
+ background: rgba(0,0,0,.1);
+ height: 100%;
+ width: 25%;
+ left: 0;
+}
+
+/* mega-menu */
+.wsu-mega-nav-container {
+ padding-bottom: 1rem;
+}
+
+.header-drawer .two .mega-menu-wrapper > ul > li,
+.mega-menu-labels-wrapper li {
+ float: left;
+ width: 20%;
+}
+
+#mega-menu .sub-menu {
+ padding: 0 .2rem 0 0;
+}
+
+.mega-menu-labels-wrapper > ul > li > a {
+ color: #404040;
+ font-size: .9rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ display: block;
+}
+
+.mega-menu-labels-wrapper > ul > li > a:hover {
+ color: #981e32;
+}
+
+.mega-menu-wrapper > ul > li > a {
+ display: none;
+}
+
+#mega-menu .sub-menu li,
+#signature-menu li {
+ padding-bottom: .7rem;
+}
+
+#mega-menu .sub-menu a,
+.signature-menu-wrapper a {
+ color: #c8c8c8;
+ display: block;
+ line-height: 1.2;
+ padding-right: .5rem;
+}
+
+/*--search bar--*/
+.header-search-input-wrapper,
+.header-search-a-z-wrapper {
+ width: 70%;
+ float: right;
+ margin-right: 10%;
+ margin-top: 2.5rem;
+}
+
+.header-search-a-z-wrapper {
+ margin-top: 1rem;
+ text-align: right;
+}
+
+.header-search-a-z-wrapper a {
+ color: #981e32;
+}
+
+.header-search-input-wrapper label {
+ display: none;
+}
+
+.header-search-input-wrapper input[type=text] {
+ font-size: 1.5rem;
+ font-weight: 300;
+ font-family: Proxima-Nova;
+ width: 100%;
+}
+
+.header-search-wrapper {
+ height: auto;
+ padding: 3rem 0;
+ background: #dbdbdb;
+}
+
+.quick-links-label {
+ color: #981e32;
+ font-size: 1rem;
+ margin-bottom: 1rem;
+}
+
+.menu-quick-links-search-container ul {
+ list-style: none;
+ padding: 0;
+}
+
+.menu-quick-links-search-container li {
+ width: 50%;
+ float: left;
+}
+
+.menu-quick-links-search-container li a {
+ color: #5e6a71;
+}
+
+/* - closing Xs - */
+.close-header-drawer,
+.close-header-search {
+ position: absolute;
+ bottom: 1rem;
+ right: 1rem;
+ color: #fff;
+ font-size: 2rem;
+ font-weight: 300;
+ cursor: pointer;
+ transition: color .3s ease;
+}
+
+.close-header-drawer:hover,
+.close-header-search:hover {
+ color: #c60c30;
+}
+
+
+/*---------------- Responsive ----------------------*/
+@media screen and (max-width: 1200px) {
+ .home .header-shelf .column.three {
+  bottom: inherit;
+ }
+
+ .fluid .main-header .row.triptych .column.three {
+  width: auto;
+  border: 1px solid #dbdbdb;
+ }
+
+ .home .fluid .main-header .row.triptych .column.three {
+  width: 50%;
+  border: none;
+ }
+
+ .top-level-links-label,
+ .search-label {
+  width: auto;
+  bottom: inherit;
+  top: 0;
+  padding: .5rem 1rem;
+  position: relative;
+  line-height: 1;
+  font-size: .8rem;
+  font-weight: 400;
+  float: right;
+ }
+
+ .top-level-links-label {
+  border-right: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  padding-top: calc(1px + .5rem);
+  float: right;
+ }
+
+ .search-label {
+  right: 0;
+ }
+
+ .home .fluid .main-header .row.triptych.header-shelf .column.two {
+  bottom: 10px;
+ }
+
+ .home .fluid .main-header .row.triptych.header-shelf .column.two,
+ .home .fluid .row.triptych .column.two {
+  width: 75%;
+ }
+}
+
+@media screen and (max-width: 989px) {
+ .home #binder.fluid main {
+  width: 100% !important;
+  margin-left: 0;
+ }
+
+ .features-container h2 {
+  font-size: 7vw;
+ }
+
+ .athletics ul {
+  margin-top: 3rem;
+ }
+
+ .athletics li {
+  font-size: 1rem;
+ }
+
+ .athletics img.athletics-logo,
+ .athletics ul {
+  padding: 2.5rem 0 0 2rem;
+ }
+}
+
+@media screen and (max-width: 791px) {
+ .wsu-logo {
+  padding: 2rem 1rem 1.3rem;
+ }
+
+ #binder.fluid main {
+  margin-top: 0;
+ }
+
+ .mega-menu-labels-wrapper > ul > li > a {
+  font-size: .7rem;
+ }
+
+ .features-container h2 {
+  font-size: 8vw;
+  border-left: 4vw solid #981e32;
+ }
+
+ .features-container .home-subtitle {
+  font-size: 3vw;
+ }
+
+ .features-container .home-subtitle,
+ .features-container .home-cta {
+  width: 50%;
+ }
+
+ .features-container .home-cta {
+  margin-left: calc(4vw + 1rem);
+  padding-left: 0;
+ }
+
+ .media-wall-column-0,
+ .media-wall-column-3,
+ .media-wall-column-4 {
+  display: none;
+ }
+
+ .media-wall-column-1 a:first-child,
+ .media-wall-column-2 a:first-child {
+  margin-top: 0;
+  display: none;
+ }
+
+ .media-wall-column-1,
+ .media-wall-column-2 {
+  width: 50%;
+ }
+
+ .fluid .row.halves.photowall .column.two {
+  margin-top: 2rem;
+  width: 100%;
+  float: left;
+  padding: 0 4rem;
+ }
+}
+
+@media screen and (max-width: 700px) {
+ .home .main-header {
+  display: none;
+ }
+
+ .home #spine {
+  display: block;
+ }
+
+ .athletics {
+  background: #fff;
+ }
+
+ .athletics .action-img {
+  display: none;
+ }
+
+ .athletics img.athletics-logo,
+ .athletics ul {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  float: left;
+  padding: 1.25rem;
+ }
+
+ .athletics img.athletics-logo {
+  padding-top: 1.5rem;
+ }
+
+ .athletics img.athletics-logo {
+  width: 60%;
+ }
+
+ .athletics ul {
+  width: 40%;
+ }
+
+ .athletics li {
+  padding: 0;
+ }
+
+ .athletics p {
+  padding-bottom: 0;
+ }
+}
+
+@media screen and (max-width: 693px) {
+ .az li {
+  width: 40px;
+ }
+
+ .spacing-loose .gutter .colum,
+ .spacing-loose .guttered,
+ .spacing-loose .halves.gutter .column.one,
+ .spacing-loose .halves.gutter .column.two,
+ .spacing-loose .halves.gutter .column:nth-of-type(2n+3),
+ .spacing-loose .halves.gutter .column:nth-of-type(2n+4),
+ .spacing-loose .margin-left.gutter .column.one,
+ .spacing-loose .margin-left.gutter .column.two,
+ .spacing-loose .margin-right.gutter .column.one,
+ .spacing-loose .margin-right.gutter .column.two,
+ .spacing-loose .quarters.gutter .column.four,
+ .spacing-loose .quarters.gutter .column.one,
+ .spacing-loose .quarters.gutter .column.three,
+ .spacing-loose .quarters.gutter .column.two,
+ .spacing-loose .quarters.gutter .column:nth-of-type(4n+5),
+ .spacing-loose .quarters.gutter .column:nth-of-type(4n+6),
+ .spacing-loose .quarters.gutter .column:nth-of-type(4n+7),
+ .spacing-loose .quarters.gutter .column:nth-of-type(4n+8),
+ .spacing-loose .side-left.gutter .column.one,
+ .spacing-loose .side-left.gutter .column.two,
+ .spacing-loose .side-right.gutter .column.one,
+ .spacing-loose .side-right.gutter .column.two,
+ .spacing-loose .single.gutter .column,
+ .spacing-loose .thirds.gutter .column.one,
+ .spacing-loose .thirds.gutter .column.three,
+ .spacing-loose .thirds.gutter .column.two,
+ .spacing-loose .thirds.gutter .column:nth-of-type(3n+4),
+ .spacing-loose .thirds.gutter .column:nth-of-type(3n+5),
+ .spacing-loose .thirds.gutter .column:nth-of-type(3n+6),
+ .spacing-loose .triptych.gutter .column.one,
+ .spacing-loose .triptych.gutter .column.three,
+ .spacing-loose .triptych.gutter .column.two,
+ .fluid .row.halves.photowall .column.two {
+  padding-left: 2rem;
+  padding-right: 2rem;
+ }
+}
+
+@media screen and (max-width: 550px) {
+ .athletics ul {
+  display: none;
+ }
+
+ .athletics img.athletics-logo {
+  margin: 0 auto;
+  float: none;
+ }
+
+ .athletics a {
+  width: 100%;
+  text-align: center;
+  display: block;
+ }
+
+ .campusphoto,
+ .phototwo {
+  display: none;
+ }
+
+ .community-head,
+ .life {
+  display: none;
+ }
+
+ .features-container .wsu-home-headline-wrapper .headline-has-background {
+  min-height: 400px;
+ }
+
+ .features-container .home-headline.headline-has-background > div {
+  bottom: 15%;
+  top: inherit;
+ }
+
+ .features-container h2 {
+  font-size: 10vw;
+ }
+
+ .features-container .home-headline-nav,
+ .home-subtitle,
+ .fat-footer-menu {
+  display: none;
+ }
+}
+
+@media screen and (max-width: 900px){
+ .fixedbg {
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+ }
+}
+
+/* ---------- Special HP Overlay styling ---------- */
+.noscroll .overlay-wrapper {
+ background: rgba(0,0,0,.92);
+}
+
+div.overlay-text {
+ position: absolute;
+ bottom: 1rem;
+ width: 100%;
+}
+
+.overlay-wrapper .aligncenter {
+ margin: 0 auto;
+}
+
+.overlay-image {
+ margin: 0 auto;
+}
+
+.overlay-wrapper p {
+ width: 100%;
+ text-align: center;
+}
+
+.overlay-top-text,
+.overlay-date,
+.overlay-button {
+ color: #fff;
+ text-transform: #fff;
+ width: 100%;
+ text-align: center;
+ text-transform: uppercase;
+ font-size: .8rem;
+ font-weight: 300;
+ letter-spacing: 8px;
+}
+
+.overlay-text h1 {
+ font-size: 3rem;
+ background-color: transparent;
+ padding: 0 1rem;
+ width: 100%;
+ margin: 0;
+ box-sizing: border-box;
+}
+
+.overlay-date {
+ letter-spacing: 2px;
+}
+
+.overlay-button,
+.overlay-button:hover {
+ border: 1px solid #fff;
+ box-shadow: none;
+ display: block;
+ max-width: 260px;
+ margin: 3rem auto 0;
+ padding: .3rem;
+ letter-spacing: 0;
+}
+
+.noscroll .overlay-dismiss {
+ position: absolute;
+ top: 1rem;
+ right: 2rem;
+ padding: .7rem .5rem .5rem;
+ border: 1px solid transparent;
+ text-transform: uppercase;
+ font-size: 2rem;
+ transition: border-color .3s ease;
+}
+
+.noscroll .overlay-dismiss:hover {
+ border: 1px solid #fff;
+}
+
+@media screen and (max-width: 550px) {
+ .overlay-image {
+  width: 85%;
+ }
+
+ div.overlay-text {
+  position: relative;
+  margin-top: -5rem;
+ }
+
+ .overlay-text h1 {
+  font-size: 1.9rem;
+ }
+
+ .overlay-top-text {
+  letter-spacing: 2px;
+ }
+}
+
+/* ---------- Active state for Feature section ---------- */
+.features-container .home-headline-nav li.active-feature {
+ background: #929292;
+ background: rgba(146,146,146,1);
+}
+
+/* ---------- Fat Footer Fix for Secondary Pages ---------- */
+main #fat-footer a,
+main #fat-footer a:hover {
+ border: none;
+ box-shadow: none;
+ padding: 0;
+ background: none;
+}
+
+/* ----- Font fix for Home page ----- */
+.opensansy main {
+ font-family: 'proxima-nova', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+
+/* ------ Impact Features ----- */
+.features-container .impact-head .home-headline.headline-has-background > div {
+ position: absolute;
+ top: inherit;
+ bottom: 5%;
+ width: 450px;
+ margin: 0 0 0 3rem;
+}
+
+.features-container .impact-head h2 {
+ border-left: none;
+ color: #fff;
+ font-size: 2.5rem;
+ line-height: .9;
+ text-transform: initial;
+ font-family: proxima-nova;
+ font-weight: 300;
+ padding: 0 0 0 1rem;
+ top: inherit;
+ bottom: inherit;
+}
+
+.features-container .impact-head h2,
+.features-container .impact-head .home-subtitle {
+ width: 100%;
+ display: block;
+ box-sizing: border-box;
+ padding: 0 2rem;
+ margin: 0;
+ background: #981e32;
+}
+
+.features-container .impact-head h2 {
+ padding-top: 1rem;
+}
+
+.features-container .impact-head .home-subtitle {
+ padding-bottom: 1rem;
+ font-weight: 300;
+}
+
+.features-container .impact-head .home-cta {
+ padding: 0 0 0 2rem;
+}
+
+p.recruit-middle.graduate {
+ margin-top: 8rem;
+ padding-bottom: 1rem;
+ color: #5e6a71;
+ line-height: 1.2;
+ font-size: 1.7rem;
+}
+
+p.button-row.graduate-apply {
+ margin-top: 3rem;
+}
+
+@media screen and (max-width:791px) {
+ .features-container .impact-head .home-headline.headline-has-background > div {
+  width: 80%;
+ }
+
+ .features-container .impact-head .home-cta {
+  padding: 0 0 0 2rem;
+  margin-left: 0;
+ }
+
+ .features-container .wsu-home-headline-wrapper.impact-head .headline-has-background {
+  background-position: center center;
+ }
+
+ .features-container .impact-head h2 {
+  font-size: 2rem;
+ }
+}
+
+/* ------ subfeature ------ */
+.subfeature {
+ border-bottom: solid 1px #cbcbcb;
+ background-color: #fff;
+ background-image: url(https://wsu.edu/wp-content/uploads/sites/625/2015/06/hp-creamery.jpg);
+ Background-position: center right;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.subfeature p {
+ color: #981e32;
+ font-size: 1.5rem;
+}
+
+.subfeature h2 {
+ color: #981e32;
+ margin: 0;
+}
+
+.subfeature .column.one {
+ padding: 2rem 4rem 2rem 8rem !important;
+ background-size: contain;
+}
+
+.subfeatures .home-cta {
+ margin-top: 2rem;
+ width: 37.5%;
+ color: #fff;
+}
+
+.subfeature .home-cta a, .subfeature .home-cta a:hover {
+ color: #981e32;
+ box-shadow: none;
+ padding: .5rem 1rem;
+ border: 1px solid #981e32;
+ text-transform: uppercase;
+ display: inline-block;
+}
+
+.subfeature .home-cta a:hover {
+ color: #981e32;
+ border: 1px solid #981e32;
+}
+
+/* ----- subfeature mobile fix ----- */
+@media screen and (max-width: 700px) {
+ .subfeature .home-cta {
+  width: 65%;
+ }
+
+ .subfeature .column.one {
+  padding: 2rem 4rem !important;
+  background-size: contain;
+ }
+
+ .subfeature {
+  Background-position: center left;
+ }
+}
+
+/* ------ Lowercase FOS dropdown ------ */
+.recruitment li.fos-label {
+ text-transform: lowercase;
+}
+
+/* ----- Manual News add ----- */
+.news .one .wsuwp-content-syndicate-wrapper.manual-csw {
+ font-size: 1rem;
+}
+
+.wsuwp-content-syndicate-list li a {
+ font-size: 16px;
+}
+
+/* ----- Calendar Item Adjustments ----- */
+.content-item-event-date {
+ padding: .5rem !important;
+ box-sizing: border-box;
+ width: 5rem !important;
+}
+
+/* ----- Athletics mobile fix ----- */
+@media screen and (max-width: 700px) {
+ .athletics {
+  background: #f2f2f2;
+ }
+}
+
+/* ------ Fixed Background fix ------ */
+@media screen and (max-width: 900px) {
+ .fixedbg {
+  background-size: cover !important;
+ }
+}
+
+/* ------ Border on mobile menu header ------ */
+#binder.fluid #spine header {
+ border-bottom: 1px solid #dbdbdb;
+}
+
+/* ----- FOS dropdown covered by lower div fix ----- */
+.find-fos {
+ z-index: 3;
+}
+
+/* ---- Fix IE8 image height for campaign ---- */
+.lt-ie9  main row.campaign-mark .column img {
+ height: 150px;
+}
+
+/**** INTERNAL STYLES ***/
+/*------------subsection featured images------------*/
+.visit-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/Screen-Shot-2015-03-18-at-11.05.46-AM.png);
+ height: 260px;
+ background-position: center;
+ text-align: center;
+}
+
+.community-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/Community-SectionHeader1.jpg);
+ height: 260px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center middle;
+ text-align: center;
+}
+
+.activelife-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/Recreation-Active.jpg);
+ height: 260px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center middle;
+ text-align: center;
+}
+
+.grandchallenge-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/research4.jpg);
+ height: 260px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center middle;
+ text-align: center;
+}
+
+.careersprof-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/Careers-Professionals.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center top;
+ text-align: center;
+}
+
+.careersstud-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/Careers-StudentJobs1.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center bottom;
+ text-align: center;
+}
+
+.showscampus-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/05/Shows-OnCampus2.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center top;
+ text-align: center;
+}
+
+.showsoffcampus-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/Shows-OffCampus.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center top;
+ text-align: center;
+}
+
+.buytix-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/Tickets-BuyTickets3.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center middle;
+ text-align: center;
+}
+
+.shoponline-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/Shopping-Online.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center bottom;
+ text-align: center;
+}
+
+.difference-research-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/WSUDifference-Research.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center bottom;
+ text-align: center;
+}
+
+.difference-statewide-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/WSUDifference-GiveBack.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center top;
+ text-align: center;
+}
+
+.excellence-statewide-ft-image {
+ background-image: url(/wp-content/uploads/sites/625/2015/03/AcademicExcellence-Nursing.jpg);
+ height: 260px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center bottom;
+ text-align: center;
+}
+
+#power {
+ box-sizing: border-box;
+ background: #f6861f;
+ padding: .5rem;
+ width: calc(100% - 198px);
+ text-align: center;
+ font-size: 14px;
+ color: #fff;
+ margin-left: 198px;
+ display: none;
+}
+
+.home #power {
+ width: 100%;
+ margin-left: 0;
+}
+
+@media screen and (max-width: 791px) {
+ #power {
+  width: 100%;
+  margin-left: 0;
+  margin-top: 49px;
+ }
+}
