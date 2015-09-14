@@ -38,10 +38,8 @@ class WSU_Spokane {
 	}
 
 	public function enqueue_scripts() {
-		if ( is_front_page() ) {
 			wp_enqueue_script( 'wsu-spokane-navigation', get_stylesheet_directory_uri() . '/js/navigation.js', array( 'jquery', 'backbone' ), spine_get_script_version(), true );
 			wp_enqueue_script( 'wsu-spokane-primary', get_stylesheet_directory_uri() . '/js/primary.js', array( 'wsu-spokane-navigation' ), spine_get_script_version(), true );
-		}
 	}
 }
 new WSU_Spokane();

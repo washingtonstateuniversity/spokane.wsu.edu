@@ -1,9 +1,5 @@
 <?php
 
-/*
- * On the home page, we display a series of navigation menus at the top.
- */
-if ( is_front_page() ) :
 	$mega_menu_args = array(
 		'theme_location'  => 'mega-menu',
 		'menu'            => 'mega-menu',
@@ -108,5 +104,3 @@ if ( is_front_page() ) :
 			<div class="close-header-search">x</div>
 		</div>
 	</header>
-	<?php
-endif;
