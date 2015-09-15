@@ -1,6 +1,8 @@
 <?php
 
-switch_to_blog( 29 );
+if ( ! defined( 'WSU_LOCAL_CONFIG' ) || ! WSU_LOCAL_CONFIG ) {
+	switch_to_blog( 29 );
+}
 
 	$mega_menu_args = array(
 		'theme_location'  => 'mega-menu',
@@ -106,4 +108,8 @@ switch_to_blog( 29 );
 			<div class="close-header-search">x</div>
 		</div>
 	</header>
-<?php restore_current_blog();
+<?php
+
+if ( ms_is_switched() ) {
+	restore_current_blog();
+}
