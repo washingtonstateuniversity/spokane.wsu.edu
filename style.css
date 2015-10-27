@@ -5,7 +5,7 @@
  Author:         WSU
  Author URI:     https://web.wsu.edu/
  Template:       spine
- Version:        0.1.3
+ Version:        0.1.4
 */
 
 .header-search-wrapper-hide {
@@ -23,6 +23,15 @@
  margin-top: 50px;
 }
 
+/* Duplicated "offsite" menu to match mega menu */
+#spine-navigation #offsite-mega-menu .menu-item .external:after {
+ display: none;
+}
+
+#spine-navigation #offsite-mega-menu .menu-item {
+ font-weight: 600;
+ border-bottom: 1px solid #8d959a !important;
+}
 
 /* ----- header-shelf -----*/
 /* column one */
