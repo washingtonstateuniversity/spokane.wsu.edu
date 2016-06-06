@@ -8,7 +8,6 @@ class WSU_Spokane {
 		add_action( 'after_setup_theme', array( $this, 'register_menus' ), 10 );
 		add_action( 'widgets_init', array( $this, 'setup_sidebars' ), 10 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 20 );
-		add_filter( 'spine_option', array( $this, 'filter_spine_color' ), 10, 2 );
 	}
 
 	/**
@@ -41,39 +40,6 @@ class WSU_Spokane {
 	public function enqueue_scripts() {
 			wp_enqueue_script( 'wsu-spokane-navigation', get_stylesheet_directory_uri() . '/js/navigation.js', array( 'jquery', 'backbone' ), spine_get_script_version(), true );
 			wp_enqueue_script( 'wsu-spokane-primary', get_stylesheet_directory_uri() . '/js/primary.js', array( 'wsu-spokane-navigation' ), spine_get_script_version(), true );
-	}
-
-	/**
-	 * Modify the color used for the Spine on different page views.
-	 *
-	 * @param string $value  The current Spine color (or other option value).
-	 * @param string $option The current Spine option being filtered.
-	 *
-	 * @return string The modified Spine color.
-	 */
-	public function filter_spine_color( $value, $option ) {
-		if ( 'spine_color' !== $option ) {
-			return $value;
-		}
-
-		$site = get_blog_details();
-
-		// We don't want to match any sub-sites.
-		if ( '/' !== $site->path ) {
-			return $value;
-		}
-
-		$pages = array(
-			'faculty-staff-resources',
-			'finance-office',
-			'a-z-index',
-		);
-
-		if ( is_page( $pages ) ) {
-			return 'white';
-		}
-
-		return $value;
 	}
 }
 new WSU_Spokane();
