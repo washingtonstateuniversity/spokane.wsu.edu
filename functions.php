@@ -56,7 +56,7 @@ class WSU_Spokane {
 			return $value;
 		}
 
-		$site = get_blog_details();
+		$site = get_site();
 
 		// We don't want to match any sub-sites.
 		if ( '/' !== $site->path ) {
